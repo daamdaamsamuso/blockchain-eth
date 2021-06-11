@@ -7,20 +7,23 @@ contract("Lottery", function ([deployer, user1, user2]) {
     lottery = await Lottery.new();
   });
 
-  it("Basic test", async () => {
-    console.log("Basic test");
-    let owner = await lottery.owner();
-    let value = await lottery.getSomeValue();
-
-    console.log(`owner : ${owner}`);
-    console.log(`value : ${value}`);
-    assert.equal(value, 5);
-  });
-
   it.only("getPot should return current pot", async () => {
     console.log("getPot should return current pot");
     let pot = await lottery.getPot();
     assert.equal(pot, 0);
   });
 
+  describe("Bet", function () {
+    it("should fail when the bet money is not 0.005 ETH", async () => {
+        // Fail transaction
+
+
+      }); 
+    it("should put the bet to the bet queue with 1 bet", async () => {
+        //bet
+
+        //contract
+
+    });
+  });
 });
